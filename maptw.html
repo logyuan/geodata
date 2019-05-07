@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<head>    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script>L_PREFER_CANVAS=false; L_NO_TOUCH=false; L_DISABLE_3D=false;</script>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.4.0/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.4.0/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://rawcdn.githack.com/python-visualization/folium/master/folium/templates/leaflet.awesome.rotate.css"/>
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    
+    <meta name="viewport" content="width=device-width,
+        initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <style>#map_2cdc608a5d894e3eb3e4c10379c55410 {
+        position: relative;
+        width: 100.0%;
+        height: 100.0%;
+        left: 0.0%;
+        top: 0.0%;
+        }
+    </style>
+</head>
+<body>    
+    
+    <div class="folium-map" id="map_2cdc608a5d894e3eb3e4c10379c55410" ></div>
+</body>
+<script>    
+    
+    
+        var bounds = null;
+    
+
+    var map_2cdc608a5d894e3eb3e4c10379c55410 = L.map(
+        'map_2cdc608a5d894e3eb3e4c10379c55410', {
+        center: [25.0465, 121.5373],
+        zoom: 20,
+        maxBounds: bounds,
+        layers: [],
+        worldCopyJump: false,
+        crs: L.CRS.EPSG3857,
+        zoomControl: true,
+        });
+L.control.scale().addTo(map_2cdc608a5d894e3eb3e4c10379c55410);
+
+    
+    var tile_layer_ed2fb9cca71f45e79ce9b9e0557a5cc9 = L.tileLayer(
+        'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',
+        {
+        "attribution": null,
+        "detectRetina": false,
+        "maxNativeZoom": 18,
+        "maxZoom": 18,
+        "minZoom": 0,
+        "noWrap": false,
+        "opacity": 1,
+        "subdomains": "abc",
+        "tms": false
+}).addTo(map_2cdc608a5d894e3eb3e4c10379c55410);
+    var tile_layer_9c26d9bfc6d34dfb8d11b7151af27f81 = L.tileLayer(
+        'https://stamen-tiles-{s}.a.ssl.fastly.net/toner/{z}/{x}/{y}.png',
+        {
+        "attribution": null,
+        "detectRetina": false,
+        "maxNativeZoom": 18,
+        "maxZoom": 18,
+        "minZoom": 0,
+        "noWrap": false,
+        "opacity": 1,
+        "subdomains": "abc",
+        "tms": false
+}).addTo(map_2cdc608a5d894e3eb3e4c10379c55410);
+    var tile_layer_fdc9ddef2360410b9690feb199071966 = L.tileLayer(
+        'http://www.historygis.udd.gov.taipei/arcgis/rest/services/Image/Image_1945_A/MapServer/WMTS/tile/1.0.0/Image_Image_1945_A/default/GoogleMapsCompatible/{z}/{y}/{x}',
+        {
+        "attribution": "\u81fa\uf963\u5e02\u653f\u5e9c\ufa26\u5e02\u767c\u5c55\u5c40\uf98c\u53f2\u5716\u8cc7\u5c55\u2f70\u7cfb\u7d71",
+        "detectRetina": false,
+        "maxNativeZoom": 18,
+        "maxZoom": 18,
+        "minZoom": 0,
+        "noWrap": false,
+        "opacity": 0.5,
+        "subdomains": "abc",
+        "tms": false
+}).addTo(map_2cdc608a5d894e3eb3e4c10379c55410);
+    var tile_layer_8a032ed9f3c244728e02ebf3e076d21a = L.tileLayer(
+        'http://www.historygis.udd.gov.taipei/arcgis/rest/services/Image/Image_1945_B/MapServer/WMTS/tile/1.0.0/Image_Image_1945_B/default/GoogleMapsCompatible/{z}/{y}/{x}',
+        {
+        "attribution": "\u81fa\uf963\u5e02\u653f\u5e9c\ufa26\u5e02\u767c\u5c55\u5c40\uf98c\u53f2\u5716\u8cc7\u5c55\u2f70\u7cfb\u7d71",
+        "detectRetina": false,
+        "maxNativeZoom": 18,
+        "maxZoom": 18,
+        "minZoom": 0,
+        "noWrap": false,
+        "opacity": 0.7,
+        "subdomains": "abc",
+        "tms": false
+}).addTo(map_2cdc608a5d894e3eb3e4c10379c55410);
+    var tile_layer_830a0fed6dc341379ac9805e51174cd3 = L.tileLayer(
+        'http://140.110.143.56/moi/TW_DLA_20010814_20061226_20M_3857_10_HILLSHADE_ARCGIS_AERIALPHOTO/{z}/{y}/{x}.png',
+        {
+        "attribution": "\u5167\u653f\u90e8",
+        "detectRetina": false,
+        "maxNativeZoom": 18,
+        "maxZoom": 18,
+        "minZoom": 0,
+        "noWrap": false,
+        "opacity": 0.7,
+        "subdomains": "abc",
+        "tms": false
+}).addTo(map_2cdc608a5d894e3eb3e4c10379c55410);
+    
+            var layer_control_9557a538e74142bd855a463ca1d21739 = {
+                base_layers : { "openstreetmap" : tile_layer_ed2fb9cca71f45e79ce9b9e0557a5cc9,"stamentoner" : tile_layer_9c26d9bfc6d34dfb8d11b7151af27f81, },
+                overlays : { "1945轟炸後" : tile_layer_fdc9ddef2360410b9690feb199071966,"1945轟炸前" : tile_layer_8a032ed9f3c244728e02ebf3e076d21a,"內政部地形" : tile_layer_830a0fed6dc341379ac9805e51174cd3, }
+                };
+            L.control.layers(
+                layer_control_9557a538e74142bd855a463ca1d21739.base_layers,
+                layer_control_9557a538e74142bd855a463ca1d21739.overlays,
+                {position: 'topright',
+                 collapsed: true,
+                 autoZIndex: true
+                }).addTo(map_2cdc608a5d894e3eb3e4c10379c55410);
+            
+                tile_layer_9c26d9bfc6d34dfb8d11b7151af27f81.remove();
+        
+    
+        var marker_6e2e0bef784f4869a5ca573ac5330815 = L.marker(
+            [25.0617, 121.54455],
+            {
+                icon: new L.Icon.Default(),
+                }
+            ).addTo(map_2cdc608a5d894e3eb3e4c10379c55410);
+        
+    
+
+                var icon_07162122156e4e90a2b382d44964d810 = L.AwesomeMarkers.icon({
+                    icon: 'plane',
+                    iconColor: 'blue',
+                    markerColor: 'red',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_6e2e0bef784f4869a5ca573ac5330815.setIcon(icon_07162122156e4e90a2b382d44964d810);
+            
+    
+            var popup_5756265550d44ff886c8fded0d41358f = L.popup({maxWidth: '100%'
+            
+            });
+
+            
+                var html_42d1f854d7a54541b6eecbb17cfe1016 = $(`<div id="html_42d1f854d7a54541b6eecbb17cfe1016" style="width: 100.0%; height: 100.0%;">test point</div>`)[0];
+                popup_5756265550d44ff886c8fded0d41358f.setContent(html_42d1f854d7a54541b6eecbb17cfe1016);
+            
+
+            marker_6e2e0bef784f4869a5ca573ac5330815.bindPopup(popup_5756265550d44ff886c8fded0d41358f)
+            ;
+
+            
+        
+    
+                var lat_lng_popup_73eeca2731bd4a71a1547a0553be4115 = L.popup();
+                function latLngPop(e) {
+                    lat_lng_popup_73eeca2731bd4a71a1547a0553be4115
+                        .setLatLng(e.latlng)
+                        .setContent("Latitude: " + e.latlng.lat.toFixed(4) +
+                                    "<br>Longitude: " + e.latlng.lng.toFixed(4))
+                        .openOn(map_2cdc608a5d894e3eb3e4c10379c55410);
+                    }
+                map_2cdc608a5d894e3eb3e4c10379c55410.on('click', latLngPop);
+            
+</script>
